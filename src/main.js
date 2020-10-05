@@ -1,9 +1,13 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
+// import router from "./router";
 import store from "./store";
+import "normalize.css";
+import SvgIcon from "@/components/SvgIcon";
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .mount("#app");
+const app = createApp(App);
+
+app.use(store);
+// app.use(router)
+app.component("svg-icon", SvgIcon);
+app.mount("#app");

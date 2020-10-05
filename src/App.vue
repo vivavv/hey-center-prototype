@@ -1,10 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <SvgSprite />
+  <AppTheme mode="light">
+    <AppBar />
+  </AppTheme>
 </template>
+<script>
+import AppTheme from "@/components/AppTheme";
+import AppBar from "@/components/AppBar";
+import SvgSprite from "@/components/SvgIcon/SvgSprite";
+
+export default {
+  components: {
+    SvgSprite,
+    AppTheme,
+    AppBar
+  }
+};
+</script>
 
 <style>
 #app {
