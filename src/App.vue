@@ -1,24 +1,34 @@
 <template>
   <SvgSprite />
   <AppTheme mode="light">
-    <AppBar />
+    <div class="container">
+      <AppBar />
+      <AppSidebar />
+    </div>
   </AppTheme>
 </template>
 <script>
-import AppTheme from "@/components/AppTheme";
-import AppBar from "@/components/AppBar";
 import SvgSprite from "@/components/SvgIcon/SvgSprite";
+import AppTheme from "@/themes/AppTheme";
+import AppBar from "@/components/AppBar";
+import AppSidebar from "@/components/AppSidebar";
 
 export default {
   components: {
     SvgSprite,
     AppTheme,
-    AppBar
+    AppBar,
+    AppSidebar
   }
 };
 </script>
 
 <style>
+.container {
+  width: 100%;
+  display: flex;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

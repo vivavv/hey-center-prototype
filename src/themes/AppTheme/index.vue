@@ -16,7 +16,10 @@ export default {
 .light {
   --background-color: white;
   --on-background-color: #222;
-  --primary-color: gray;
+  --primary-color: #1d2640;
+  --secondary-color: #04133f;
+  --gray: #707070;
+  --icons: white;
 }
 
 .dark {
