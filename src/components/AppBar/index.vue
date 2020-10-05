@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-bar {
-  width: 90px;
+  width: var(--app-bar-width);
   height: 100vh;
   background-color: var(--primary-color);
   display: flex;

@@ -1,9 +1,13 @@
 <template>
   <div class="sidebar-footer">
-    <div class="user-picture" />
     <div>
-      <div class="user-title">vivavv</div>
-      <div class="user-status">This is a cool status</div>
+      <div class="user-info-container">
+        <div class="user-picture" />
+        <div class="user-description">
+          <div class="user-title">vivavv</div>
+          <div class="user-status">This is a cool status</div>
+        </div>
+      </div>
     </div>
     <svg-icon icon="arrows-down" class="footer-icon" />
   </div>
@@ -20,7 +24,14 @@ export default {
   background-color: var(--secondary-color);
   height: 75px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.user-info-container {
+  text-align: left;
+  display: flex;
   align-items: center;
 }
 
@@ -29,6 +40,11 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  display: inline-block;
+}
+
+.user-description {
+  margin-left: 20px;
 }
 
 .user-title {
@@ -43,8 +59,10 @@ export default {
   font-family: "ProximaNova";
   font-size: 16px;
 }
+
 .footer-icon {
   color: var(--icons);
   transform: rotate(90deg);
+  font-size: 1.3em;
 }
 </style>

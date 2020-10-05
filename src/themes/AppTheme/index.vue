@@ -20,6 +20,7 @@ export default {
   --secondary-color: #04133f;
   --gray: #707070;
   --icons: white;
+
 }
 
 .dark {

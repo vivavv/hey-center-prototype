@@ -1,13 +1,13 @@
 <template>
   <div class="search-box-container">
     <div class="input-container">
-      <!-- <svg-icon icon="search" class="search-icon" /> -->
+      <svg-icon icon="search" class="search-icon" />
       <input
         type="search"
         id="search"
         name="search"
         placeholder="Search..."
-        class="search-box"
+        class="search-input"
       />
     </div>
     <svg-icon icon="filter" class="filter-icon" />
@@ -22,51 +22,46 @@ export default {
 
 <style lang="scss" scoped>
 .search-box-container {
-  margin: 30px 0px;
   display: flex;
-  align-content: space-around;
+  align-items: center;
+  padding: 20px 25px;
 }
 
 .input-container {
   display: flex;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  align-items: center;
+  padding: 5px;
+  padding-left: 10px;
+  flex: 1;
 }
 
 .search-icon {
   color: var(--gray);
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .filter-icon {
   color: var(--gray);
   font-size: 30px;
-  margin-left: 30px;
-  margin-top: 12px;
+  margin-left: 20px;
 }
 
-.search-box {
-  margin-left: 20px;
-  border: 1px solid var(--gray);
-  border-radius: 5px;
-  height: 56px;
-  width: 284px;
+.search-input {
+  border: none;
+  padding: 10px 10px;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--gray);
+  font-family: "ProximaNova";
+
   opacity: 1; /* Firefox */
-  padding-left: 10px;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: var(--gray);
-  padding-left: 10px;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: var(--gray);
-  padding-left: 10px;
 }
 </style>

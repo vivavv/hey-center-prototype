@@ -4,6 +4,7 @@
     <div class="container">
       <AppBar />
       <AppSidebar />
+      <AppChat />
     </div>
   </AppTheme>
 </template>
@@ -12,13 +13,15 @@ import SvgSprite from "@/components/SvgIcon/SvgSprite";
 import AppTheme from "@/themes/AppTheme";
 import AppBar from "@/components/AppBar";
 import AppSidebar from "@/components/AppSidebar";
+import AppChat from "@/components/AppChat";
 
 export default {
   components: {
     SvgSprite,
     AppTheme,
     AppBar,
-    AppSidebar
+    AppSidebar,
+    AppChat
   }
 };
 </script>
