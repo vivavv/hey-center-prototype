@@ -8,7 +8,7 @@
     </div>
     <div>
       <AppBarLink icon="moon" />
-      <AppBarLink icon="menu-sidebar" />
+      <AppBarLink icon="menu-horizontal" />
     </div>
   </div>
 </template>

@@ -49,20 +49,19 @@ export default {
 
 .user-title {
   color: var(--icons);
-  font-family: "ProximaNova";
-  font-size: 18px;
+  font-size: var(--footer-title);
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .user-status {
   color: var(--icons);
-  font-family: "ProximaNova";
-  font-size: 16px;
+  font-size: var(--footer-status);
 }
 
 .footer-icon {
   color: var(--icons);
+  font-size: var(--icon-sm);
   transform: rotate(90deg);
-  font-size: 1.3em;
 }
 </style>

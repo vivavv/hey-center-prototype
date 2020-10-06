@@ -25,6 +25,7 @@ export default {
   display: flex;
   align-items: center;
   padding: 20px 25px;
+  padding-top: 40px;
 }
 
 .input-container {
@@ -39,12 +40,12 @@ export default {
 
 .search-icon {
   color: var(--gray);
-  font-size: 16px;
+  font-size: var(--icon-sm);
 }
 
 .filter-icon {
   color: var(--gray);
-  font-size: 30px;
+  font-size: var(--icon-lg);
   margin-left: 20px;
 }
 
@@ -60,8 +61,6 @@ export default {
 
 ::placeholder {
   color: var(--gray);
-  font-family: "ProximaNova";
-
   opacity: 1; /* Firefox */
 }
 </style>

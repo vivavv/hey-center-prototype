@@ -30,6 +30,7 @@ export default {
 .container {
   width: 100%;
   display: flex;
+  overflow-y: hidden;
 }
 
 #app {

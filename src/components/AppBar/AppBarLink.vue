@@ -10,8 +10,8 @@ export default {
 
 <style lang="scss" scoped>
 .app-bar-icon {
-  font-size: 25px;
+  font-size: var(--icon-md);
   color: var(--icons);
-  margin: 22px 0px;
+  margin: 30px 0px;
 }
 </style>
