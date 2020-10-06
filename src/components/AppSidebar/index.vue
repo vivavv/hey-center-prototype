@@ -4,17 +4,20 @@
     <!-- <div class="new-chat">
       <svg-icon icon="new-chat" class="new-chat-icon" />
     </div> -->
+    <ChatList />
+
     <SidebarFooter />
   </div>
 </template>
 
 <script>
 import SearchBox from "@/components/AppSidebar/SearchBox";
+import ChatList from "@/components/ChatList";
 import SidebarFooter from "@/components/AppSidebar/SidebarFooter";
 
 export default {
   name: "AppSidebar",
-  components: { SearchBox, SidebarFooter }
+  components: { SearchBox, ChatList, SidebarFooter }
 };
 </script>
 

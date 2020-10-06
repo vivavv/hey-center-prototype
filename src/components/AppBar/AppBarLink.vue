@@ -13,5 +13,11 @@ export default {
   font-size: var(--icon-md);
   color: var(--icons);
   margin: 30px 0px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--active-appbar);
+    cursor: pointer;
+  }
 }
 </style>

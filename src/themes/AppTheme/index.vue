@@ -20,7 +20,12 @@ export default {
   --secondary-color: #04133f;
   --gray: #707070;
   --icons: white;
-
+  --send-icon: #00bfff;
+  --active-appbar: #6cc8d6;
+  --active-icons: #b6b6b6;
+  --chat-border: #ededed;
+  --chat-bar: rgba(211, 211, 211, 0.2);
+  --chat-item-active: rgba(211, 211, 211, 0.35);
 }
 
 .dark {

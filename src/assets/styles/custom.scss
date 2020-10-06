@@ -2,18 +2,29 @@
   /* layout */
   --app-bar-width: 90px;
   --app-sidebar-width: 400px;
+  --searchbox-height: 110px;
+  --sidebar-footer: 75px;
   --chat-header-height: 125px;
-  --chat-textare-height: 160px;
+  --chat-textarea-height: 160px;
+  --chat-bar-height: 40px;
+  --chat-item: 100px;
 
   /* text */
-  --footer-title: 16px;
-  --footer-status: 14px;
+  --footer-text: 14px;
   --header-title: 22px;
   --header-status: 18px;
+  --chat-bar-text: 16px;
+  --chat-preview: 18px;
+  --time-stamp: 14px;
+
+  /* status */
+  --active: #4de458;
+  --inactive: #707370;
+  --busy: #eb2345;
 
   /* brands */
   --telegram: #0088cc;
-  --telegram-opacity: rgba(--telegram, 0.5);
+  --telegram-opacity: rgba(0, 136, 204, 0.5);
 
   /* badges */
   --success: #4de458;
@@ -30,22 +41,6 @@
 #app {
   font-family: "ProximaNova";
   box-sizing: border-box;
-}
-
-.badge {
-  font-size: 20px;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
-}
-.badge-success {
-  background-color: var(--success);
-}
-.badge-warn {
-  background-color: var(--warn);
-}
-.badge-info {
-  background-color: var(--info);
 }
 
 /** Fonts **/

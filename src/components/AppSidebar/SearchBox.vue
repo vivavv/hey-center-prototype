@@ -40,13 +40,19 @@ export default {
 
 .search-icon {
   color: var(--gray);
-  font-size: var(--icon-sm);
+  font-size: var(--icon-xs);
 }
 
 .filter-icon {
   color: var(--gray);
   font-size: var(--icon-lg);
   margin-left: 20px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--active-icons);
+    cursor: pointer;
+  }
 }
 
 .search-input {
@@ -61,6 +67,6 @@ export default {
 
 ::placeholder {
   color: var(--gray);
-  opacity: 1; /* Firefox */
+  opacity: 1;
 }
 </style>
