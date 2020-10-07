@@ -5,17 +5,19 @@
   --searchbox-height: 110px;
   --sidebar-footer: 75px;
   --chat-header-height: 125px;
-  --chat-textarea-height: 160px;
+  --chat-textarea-height: 130px;
   --chat-bar-height: 40px;
   --chat-item: 100px;
 
   /* text */
   --footer-text: 14px;
-  --header-title: 22px;
-  --header-status: 18px;
+  --header-title: 20px;
+  --header-status: 16px;
   --chat-bar-text: 16px;
   --chat-preview: 18px;
   --time-stamp: 14px;
+  --chat-status-text: 14px;
+  --chat-messages-text: 16px;
 
   /* status */
   --active: #4de458;
@@ -24,7 +26,14 @@
 
   /* brands */
   --telegram: #0088cc;
-  --telegram-opacity: rgba(0, 136, 204, 0.5);
+  --telegram-dark: rgba(0, 136, 204, 0.5);
+  --telegram-opacity: rgba(0, 136, 204, 0.2);
+  --whatsapp: #4fce5d;
+  --whatsapp-dark: rgba(70, 194, 46, 0.5);
+  --whatsapp-opacity: rgba(70, 194, 46, 0.2);
+  --fb-messenger: #0078ff;
+  --fb-messenger-dark: rgba(0, 120, 255, 0.5);
+  --fb-messenger-opacity: rgba(0, 120, 255, 0.2);
 
   /* badges */
   --success: #4de458;
@@ -36,6 +45,24 @@
   --icon-md: 1.6em;
   --icon-sm: 1.3em;
   --icon-xs: 1em;
+}
+
+.chat-bubble {
+  position: relative;
+  margin-top: 15px;
+  max-width: 400px;
+  padding: 15px 90px 15px 30px;
+  border-radius: 8px;
+  font-size: var(--chat-messages-text);
+  text-align: left;
+}
+
+.chat-timestamp {
+  font-size: 12px;
+  text-align: right;
+  position: absolute;
+  bottom: 6px;
+  right: 20px;
 }
 
 #app {

@@ -26,6 +26,8 @@ export default {
   --chat-border: #ededed;
   --chat-bar: rgba(211, 211, 211, 0.2);
   --chat-item-active: rgba(211, 211, 211, 0.35);
+  --chat-status: rgba(112, 112, 112, 0.2);
+  --chat-bubble: #f1f1f1;
 }
 
 .dark {

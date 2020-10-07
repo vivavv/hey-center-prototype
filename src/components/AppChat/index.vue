@@ -1,18 +1,19 @@
 <template>
   <div class="app-chat">
     <ChatHeader />
-    <div class="chat-area">asdfasd</div>
+    <ChatContent />
     <ChatTextarea />
   </div>
 </template>
 
 <script>
 import ChatHeader from "@/components/AppChat/ChatHeader";
+import ChatContent from "@/components/AppChat/ChatContent";
 import ChatTextarea from "@/components/AppChat/ChatTextarea";
 
 export default {
   name: "AppChat",
-  components: { ChatHeader, ChatTextarea }
+  components: { ChatHeader, ChatContent, ChatTextarea }
 };
 </script>
 
@@ -21,11 +22,6 @@ export default {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  flex: 1;
-  // height: 100vh;
-}
-
-.chat-area {
   flex: 1;
 }
 </style>

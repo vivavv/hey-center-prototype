@@ -104,6 +104,6 @@ export default {
 }
 
 .icon-brand {
-  background-color: var(--telegram-opacity);
+  background-color: var(--telegram-dark);
 }
 </style>

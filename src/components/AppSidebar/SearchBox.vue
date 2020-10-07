@@ -45,7 +45,7 @@ export default {
 
 .filter-icon {
   color: var(--gray);
-  font-size: var(--icon-lg);
+  font-size: var(--icon-md);
   margin-left: 20px;
   transition: color 0.2s ease;
 
