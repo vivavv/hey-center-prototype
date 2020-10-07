@@ -3,10 +3,13 @@
     <app-accordion>
       <app-accordion-item title="FAVORITES">
         <ChatItem
-          name="Anna Sun"
-          preview="This house is falling..."
-          time="4:44 PM"
-          picture="profile-pic.svg"
+          v-for="chat in $store.state.chats"
+          :key="chat.id"
+          :name="chat.name"
+          :preview="chat.messages[chat.messages.length - 1].text"
+          :time="chat.messages[chat.messages.length - 1].date"
+          :picture="chat.profilePic"
+          :service="chat.service"
         />
       </app-accordion-item>
       <app-accordion-item title="CHATS"

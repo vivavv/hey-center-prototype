@@ -3,7 +3,7 @@
   <AppTheme mode="light">
     <div class="container">
       <DesktopApp v-if="!mobileView" />
-      <MobileApp v-else />
+      <router-view v-else />
     </div>
   </AppTheme>
 </template>
@@ -11,14 +11,12 @@
 import SvgSprite from "@/components/SvgIcon/SvgSprite";
 import AppTheme from "@/themes/AppTheme";
 import DesktopApp from "@/components/DesktopApp";
-import MobileApp from "@/components/MobileApp";
 
 export default {
   components: {
     SvgSprite,
     AppTheme,
-    DesktopApp,
-    MobileApp
+    DesktopApp
   },
   data: () => {
     return {

@@ -30,6 +30,8 @@ export default {
   --chat-border: #ededed;
   --chat-bar: rgba(211, 211, 211, 0.2);
   --chat-item-active: rgba(211, 211, 211, 0.35);
+  --chat-header-background: #1d2640;
+  --chat-header-text: #e4e4e4;
   --chat-background: #ffffff;
   --chat-status: rgba(112, 112, 112, 0.2);
   --chat-bubble: #f1f1f1;
@@ -55,6 +57,7 @@ export default {
   --chat-border: #424242;
   --chat-bar: rgba(211, 211, 211, 0.2);
   --chat-item-active: rgba(211, 211, 211, 0.35);
+  --chat-header-background: #2b2b2d;
   --chat-background: #2b2b2d;
   --chat-status: rgba(112, 112, 112, 0.2);
   --chat-bubble: #4f4f4f;

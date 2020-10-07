@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="chat-item-info-right">
-      <span class="icon-badge 5"><svg-icon icon="telegram"/></span>
+      <span class="icon-badge icon-brand"><svg-icon :icon="service"/></span>
       <div class="time-stamp">{{ time }}</div>
     </div>
   </div>
@@ -20,7 +20,13 @@
 <script>
 export default {
   name: "ChatItem",
-  props: { name: String, preview: String, time: String, picture: String }
+  props: {
+    name: String,
+    preview: String,
+    time: String,
+    picture: String,
+    service: String
+  }
 };
 </script>
 

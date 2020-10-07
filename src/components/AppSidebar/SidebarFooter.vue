@@ -1,10 +1,13 @@
 <template>
   <div class="sidebar-footer">
     <div class="user-info-container">
-      <div class="user-picture" />
+      <img
+        class="user-picture"
+        :src="require(`../../assets/images/${$store.state.session.profilePic}`)"
+      />
       <div class="user-description">
-        <div class="user-title">vivavv</div>
-        <div class="user-status">This is a cool status</div>
+        <div class="user-title">{{ $store.state.session.name }}</div>
+        <div class="user-status">{{ $store.state.session.status }}</div>
       </div>
     </div>
     <svg-icon icon="arrows-down" class="footer-icon" />

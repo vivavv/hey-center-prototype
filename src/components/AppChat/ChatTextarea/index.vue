@@ -6,7 +6,7 @@
         id="textarea"
         name="textarea"
         :maxHeight="150"
-        rows=""
+        :rows="1"
         placeholder="Enter a message..."
       />
       <svg-icon icon="send" class="send-icon" />
@@ -69,6 +69,11 @@ export default {
   &:hover {
     color: var(--active-icons);
     cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  .chat-text-area-container {
+    min-height: 150px;
   }
 }
 </style>
