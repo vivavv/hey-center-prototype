@@ -24,7 +24,6 @@ export default {
 <style lang="scss" scoped>
 .app-bar {
   width: var(--app-bar-width);
-  height: 100vh;
   background-color: var(--primary-color);
   display: flex;
   flex-direction: column;

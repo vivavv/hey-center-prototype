@@ -58,6 +58,7 @@ export default {
 .search-input {
   border: none;
   padding: 10px 10px;
+  width: 100%;
 
   &:focus {
     border: none;
@@ -68,5 +69,36 @@ export default {
 ::placeholder {
   color: var(--gray);
   opacity: 1;
+}
+
+/* Small devices (landscape phones, 600px and up) */
+@media (max-width: 600px) {
+  .search-box-container {
+    background-color: var(--primary-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .input-container {
+    border-color: var(--search-box-border);
+  }
+
+  .search-input {
+    background-color: var(--primary-color);
+    color: var(--search-box-text);
+
+    &::placeholder {
+      color: var(--search-box-text);
+      opacity: 1;
+    }
+  }
+
+  .search-icon {
+    color: var(--search-box-text);
+  }
+
+  .filter-icon {
+    color: var(--search-box-text);
+  }
 }
 </style>

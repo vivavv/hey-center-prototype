@@ -4,6 +4,7 @@
       What do you know? This house is falling apart. What can I say? this house
       is falling apart
     </div>
+    <svg-icon icon="bubble-corner" class="bubble-corner" />
     <div class="chat-timestamp">2:22 PM</div>
   </div>
 </template>
@@ -21,5 +22,17 @@ export default { name: "ChatReceived" };
 
 .text-received {
   font-weight: bold;
+}
+
+.bubble-corner {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: -6px;
+  left: -10px;
+  z-index: 0;
+  color: var(--telegram-opacity);
 }
 </style>

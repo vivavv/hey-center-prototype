@@ -57,6 +57,7 @@ h1 {
 
 .chat-items-container {
   flex: 1 1 auto;
+  // flex: 1;
   overflow-y: auto;
   height: 0px;
 }

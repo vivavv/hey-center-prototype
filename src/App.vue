@@ -2,26 +2,37 @@
   <SvgSprite />
   <AppTheme mode="light">
     <div class="container">
-      <AppBar />
-      <AppSidebar />
-      <AppChat />
+      <DesktopApp v-if="!mobileView" />
+      <MobileApp v-else />
     </div>
   </AppTheme>
 </template>
 <script>
 import SvgSprite from "@/components/SvgIcon/SvgSprite";
 import AppTheme from "@/themes/AppTheme";
-import AppBar from "@/components/AppBar";
-import AppSidebar from "@/components/AppSidebar";
-import AppChat from "@/components/AppChat";
+import DesktopApp from "@/components/DesktopApp";
+import MobileApp from "@/components/MobileApp";
 
 export default {
   components: {
     SvgSprite,
     AppTheme,
-    AppBar,
-    AppSidebar,
-    AppChat
+    DesktopApp,
+    MobileApp
+  },
+  data: () => {
+    return {
+      mobileView: true
+    };
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth <= 600;
+    }
+  },
+  created() {
+    this.handleView();
+    window.addEventListener("resize", this.handleView);
   }
 };
 </script>
@@ -29,6 +40,7 @@ export default {
 <style>
 .container {
   width: 100%;
+  height: 100vh;
   display: flex;
   overflow-y: hidden;
 }

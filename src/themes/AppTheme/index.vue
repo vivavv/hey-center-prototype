@@ -26,7 +26,8 @@ export default {
   --active-icons: #b6b6b6;
   --search-box: #ffffff;
   --search-box-border: #2a334e;
-  --chat-border: #020202;
+  --search-box-text: #ffffff;
+  --chat-border: #ededed;
   --chat-bar: rgba(211, 211, 211, 0.2);
   --chat-item-active: rgba(211, 211, 211, 0.35);
   --chat-background: #ffffff;
@@ -49,6 +50,8 @@ export default {
   --active-appbar: #e8e8e8;
   --active-icons: #e8e8e8;
   --search-box: #2b2c30;
+  // --search-box-border: #2a334e;
+  // --search-box-text: #ffffff;
   --chat-border: #424242;
   --chat-bar: rgba(211, 211, 211, 0.2);
   --chat-item-active: rgba(211, 211, 211, 0.35);

@@ -1,10 +1,10 @@
 <template>
-  <svg-icon :icon="icon" class="app-bar-icon" />
+  <svg-icon :icon="icon" class="app-bar-icon" :class="{ active }" />
 </template>
 
 <script>
 export default {
-  props: { icon: String }
+  props: { icon: String, active: Boolean }
 };
 </script>
 
@@ -18,6 +18,18 @@ export default {
   &:hover {
     color: var(--active-appbar);
     cursor: pointer;
+  }
+
+  &.active {
+    color: var(--active-appbar);
+    border-bottom: 2px solid var(--active-appbar);
+  }
+}
+
+/* Small devices (landscape phones, 600px and up) */
+@media (max-width: 600px) {
+  .app-bar-icon {
+    margin: 10px 0px;
   }
 }
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div class="sidebar">
     <SearchBox />
-    <!-- <div class="new-chat">
-      <svg-icon icon="new-chat" class="new-chat-icon" />
-    </div> -->
     <ChatList />
 
     <SidebarFooter />
@@ -12,7 +9,7 @@
 
 <script>
 import SearchBox from "@/components/AppSidebar/SearchBox";
-import ChatList from "@/components/ChatList";
+import ChatList from "@/components/AppSidebar/ChatList";
 import SidebarFooter from "@/components/AppSidebar/SidebarFooter";
 
 export default {
@@ -28,7 +25,6 @@ export default {
   border-right: 1px solid var(--gray);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .new-chat {
@@ -44,5 +40,14 @@ export default {
   font-size: 30px;
   position: relative;
   top: calc(50% - 15px);
+}
+
+/* Small devices (landscape phones, 600px and up) */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    flex: 1;
+  }
 }
 </style>

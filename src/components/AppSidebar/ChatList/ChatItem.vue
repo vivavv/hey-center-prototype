@@ -2,7 +2,7 @@
   <div class="chat-item-container">
     <div class="chat-item-info-left">
       <img
-        :src="require(`../../assets/images/${picture}`)"
+        :src="require(`../../../assets/images/${picture}`)"
         class="chat-item-picture"
       />
       <div class="chat-item-description">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="chat-item-info-right">
-      <span class="icon-badge icon-brand"><svg-icon icon="telegram"/></span>
+      <span class="icon-badge 5"><svg-icon icon="telegram"/></span>
       <div class="time-stamp">{{ time }}</div>
     </div>
   </div>
@@ -84,7 +84,7 @@ export default {
   &::before {
     content: "";
     display: inline-block;
-    background-image: url("../../assets/icons/double-check-gray.svg");
+    background-image: url("../../../assets/icons/double-check-gray.svg");
     height: 1em;
     width: 1em;
     background-size: 1.2em 1.2em;
