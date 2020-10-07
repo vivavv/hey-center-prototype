@@ -1,7 +1,7 @@
 <template>
   <div class="app-chat">
-    <ChatHeader />
-    <ChatContent />
+    <ChatHeader :chat="chat" />
+    <ChatContent :messages="chat.messages" :service="chat.service" />
     <ChatTextarea />
   </div>
 </template>
@@ -13,7 +13,13 @@ import ChatTextarea from "@/components/AppChat/ChatTextarea";
 
 export default {
   name: "AppChat",
-  components: { ChatHeader, ChatContent, ChatTextarea }
+  components: { ChatHeader, ChatContent, ChatTextarea },
+  computed: {
+    chat() {
+      console.log(this.$route.params.id);
+      return this.$store.getters.getChatById(this.$route.params.id || 0);
+    }
+  }
 };
 </script>
 

@@ -9,7 +9,7 @@ const routes = [
     component: MobileApp
   },
   {
-    path: "/chat",
+    path: "/chat/:id",
     name: "AppChat",
     component: AppChat
   }

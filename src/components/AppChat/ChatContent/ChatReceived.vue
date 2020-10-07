@@ -1,22 +1,24 @@
 <template>
-  <div class="chat-bubble received">
+  <div class="chat-bubble received" :class="service">
     <div class="text-received">
-      What do you know? This house is falling apart. What can I say? this house
-      is falling apart
+      {{ message }}
     </div>
     <svg-icon icon="bubble-corner" class="bubble-corner" />
-    <div class="chat-timestamp">2:22 PM</div>
+    <div class="chat-timestamp">{{ date }}</div>
   </div>
 </template>
 
 <script>
-export default { name: "ChatReceived" };
+export default {
+  name: "ChatReceived",
+  props: { message: String, date: String, service: String }
+};
 </script>
 
 <style lang="scss" scoped>
 .received {
   align-self: flex-start;
-  background-color: var(--telegram-opacity);
+  background-color: var(--telegram-bubble);
   color: var(--gray);
 }
 
@@ -31,8 +33,28 @@ export default { name: "ChatReceived" };
   position: absolute;
   background-repeat: no-repeat;
   bottom: -6px;
-  left: -10px;
+  left: -8px;
   z-index: 0;
-  color: var(--telegram-opacity);
+}
+
+.telegram {
+  background-color: var(--telegram-bubble);
+  .bubble-corner {
+    color: var(--telegram-bubble);
+  }
+}
+
+.whatsapp {
+  background-color: var(--whatsapp-bubble);
+  .bubble-corner {
+    color: var(--whatsapp-bubble);
+  }
+}
+
+.fb-messenger {
+  background-color: var(--fb-messenger-bubble);
+  .bubble-corner {
+    color: var(--fb-messenger-bubble);
+  }
 }
 </style>

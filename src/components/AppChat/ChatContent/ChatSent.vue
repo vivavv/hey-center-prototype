@@ -1,16 +1,15 @@
 <template>
   <div class="chat-bubble sent">
     <div class="text-sent">
-      We got no money, but we got heart. We're gonna rattle this ghost town.
-      This house is falling apart!!!
+      {{ message }}
     </div>
     <svg-icon icon="bubble-corner" class="bubble-corner" />
-    <div class="chat-timestamp timestamp-sent">2:22 PM</div>
+    <div class="chat-timestamp timestamp-sent">{{ date }}</div>
   </div>
 </template>
 
 <script>
-export default { name: "ChatSent" };
+export default { name: "ChatSent", props: { message: String, date: String } };
 </script>
 
 <style lang="scss" scoped>

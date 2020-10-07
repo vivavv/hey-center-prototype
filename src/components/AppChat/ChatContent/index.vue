@@ -1,14 +1,19 @@
 <template>
   <div class="chat-content-container">
-    <ChatStatus />
-    <ChatReceived />
-    <ChatSent />
-    <ChatReceived />
-    <ChatSent /><ChatReceived /> <ChatSent /><ChatReceived />
-    <ChatSent /><ChatReceived />
-    <ChatReceived />
-    <ChatReceived />
-    <ChatSent />
+    <!-- <ChatStatus /> -->
+    <template v-for="message in messages" :key="message.id">
+      <ChatReceived
+        v-if="message.type === 'receive'"
+        :message="message.text"
+        :date="message.date"
+        :service="service"
+      />
+      <ChatSent
+        v-if="message.type === 'send'"
+        :message="message.text"
+        :date="message.date"
+      />
+    </template>
   </div>
 </template>
 
@@ -19,7 +24,8 @@ import ChatSent from "./ChatSent";
 
 export default {
   name: "ChatContent",
-  components: { ChatStatus, ChatReceived, ChatSent }
+  components: { ChatStatus, ChatReceived, ChatSent },
+  props: { messages: Array, service: String }
 };
 </script>
 

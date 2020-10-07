@@ -1,40 +1,23 @@
 <template>
   <div class="chat-items-container">
-    <app-accordion>
-      <app-accordion-item title="FAVORITES">
+    <AppAccordion>
+      <AppAccordionItem title="FAVORITES">
         <ChatItem
-          v-for="chat in $store.state.chats"
+          v-for="chat in $store.state.chats.filter(chat => chat.favorite)"
           :key="chat.id"
-          :name="chat.name"
-          :preview="chat.messages[chat.messages.length - 1].text"
-          :time="chat.messages[chat.messages.length - 1].date"
-          :picture="chat.profilePic"
-          :service="chat.service"
+          :chat="chat"
+          @click="navigateToChat(chat.id)"
         />
-      </app-accordion-item>
-      <app-accordion-item title="CHATS"
-        ><ChatItem
-          name="Anna Sun"
-          preview="This house is falling..."
-          time="4:44 PM"
-          picture="profile-pic.svg"/>
+      </AppAccordionItem>
+      <AppAccordionItem title="CHATS">
         <ChatItem
-          name="Anna Sun"
-          preview="This house is falling..."
-          time="4:44 PM"
-          picture="profile-pic.svg"/>
-        <ChatItem
-          name="Anna Sun"
-          preview="This house is falling..."
-          time="4:44 PM"
-          picture="profile-pic.svg"/>
-        <ChatItem
-          name="Anna Sun"
-          preview="This house is falling..."
-          time="4:44 PM"
-          picture="profile-pic.svg"
-      /></app-accordion-item>
-    </app-accordion>
+          v-for="chat in $store.state.chats.filter(chat => !chat.favorite)"
+          :key="chat.id"
+          :chat="chat"
+          @click="navigateToChat(chat.id)"
+        />
+      </AppAccordionItem>
+    </AppAccordion>
   </div>
 </template>
 
@@ -49,6 +32,11 @@ export default {
     AppAccordionItem,
     AppAccordion,
     ChatItem
+  },
+  methods: {
+    navigateToChat(id) {
+      this.$router.push({ name: "AppChat", params: { id } });
+    }
   }
 };
 </script>

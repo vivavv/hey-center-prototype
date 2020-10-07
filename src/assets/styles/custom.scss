@@ -31,14 +31,8 @@
 
   /* brands */
   --telegram: #0088cc;
-  --telegram-dark: rgba(0, 136, 204, 0.5);
-  --telegram-opacity: #cce7f5;
   --whatsapp: #4fce5d;
-  --whatsapp-dark: rgba(70, 194, 46, 0.5);
-  --whatsapp-opacity: rgba(70, 194, 46, 0.2);
   --fb-messenger: #0078ff;
-  --fb-messenger-dark: rgba(0, 120, 255, 0.5);
-  --fb-messenger-opacity: rgba(0, 120, 255, 0.2);
 
   /* badges */
   --success: #4de458;
@@ -80,4 +74,38 @@
   font-family: ProximaNova;
   src: local("ProximaNova"),
     url(../fonts/ProximaNova-Regular.otf) format("truetype");
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+}
+*::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+*::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+*::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+*::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+*::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
 }

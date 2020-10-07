@@ -7,7 +7,7 @@
       <AppBarLink icon="time-clock" />
     </div>
     <div>
-      <AppBarLink icon="moon" />
+      <AppBarLink :icon="themeIcon" @click="changeTheme" />
       <AppBarLink icon="menu-horizontal" />
     </div>
   </div>
@@ -17,7 +17,17 @@
 import AppBarLink from "@/components/AppBar/AppBarLink";
 export default {
   name: "AppBar",
-  components: { AppBarLink }
+  components: { AppBarLink },
+  methods: {
+    changeTheme() {
+      this.$store.dispatch("toggleTheme");
+    }
+  },
+  computed: {
+    themeIcon() {
+      return this.$store.state.theme === "light" ? "moon" : "sun";
+    }
+  }
 };
 </script>
 

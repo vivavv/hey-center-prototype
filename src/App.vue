@@ -1,6 +1,6 @@
 <template>
   <SvgSprite />
-  <AppTheme mode="light">
+  <AppTheme :mode="$store.state.theme">
     <div class="container">
       <DesktopApp v-if="!mobileView" />
       <router-view v-else />

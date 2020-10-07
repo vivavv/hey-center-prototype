@@ -2,17 +2,23 @@
   <div class="chat-item-container">
     <div class="chat-item-info-left">
       <img
-        :src="require(`../../../assets/images/${picture}`)"
+        :src="require(`../../../assets/images/${chat.profilePic}`)"
         class="chat-item-picture"
       />
       <div class="chat-item-description">
-        <div class="chat-item-name">{{ name }}</div>
-        <div class="chat-item-preview">{{ preview }}</div>
+        <div class="chat-item-name">{{ chat.name }}</div>
+        <div class="chat-item-preview">
+          {{ previewChatMessage(lastMessage.text) }}
+        </div>
       </div>
     </div>
     <div class="chat-item-info-right">
-      <span class="icon-badge icon-brand"><svg-icon :icon="service"/></span>
-      <div class="time-stamp">{{ time }}</div>
+      <span class="icon-badge" :class="chat.service"
+        ><svg-icon :icon="chat.service"
+      /></span>
+      <div class="time-stamp" :class="{ check: lastMessage.type === 'send' }">
+        {{ lastMessage.date }}
+      </div>
     </div>
   </div>
 </template>
@@ -22,10 +28,18 @@ export default {
   name: "ChatItem",
   props: {
     name: String,
-    preview: String,
-    time: String,
-    picture: String,
-    service: String
+    chat: Object
+  },
+  methods: {
+    previewChatMessage: msg => {
+      return msg.length > 20 ? msg.slice(0, 20) + "..." : msg;
+    }
+  },
+  computed: {
+    lastMessage() {
+      console.log(this.chat.messages[this.chat.messages.length - 1]);
+      return this.chat.messages[this.chat.messages.length - 1];
+    }
   }
 };
 </script>
@@ -87,7 +101,7 @@ export default {
   margin-right: 10px;
   margin-top: 10px;
 
-  &::before {
+  &.check::before {
     content: "";
     display: inline-block;
     background-image: url("../../../assets/icons/double-check-gray.svg");
@@ -106,10 +120,17 @@ export default {
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   position: relative;
-  // right: -20px;
 }
 
-.icon-brand {
-  background-color: var(--telegram-dark);
+.telegram {
+  background-color: var(--telegram-badge);
+}
+
+.whatsapp {
+  background-color: var(--whatsapp-badge);
+}
+
+.fb-messenger {
+  background-color: var(--fb-messenger-badge);
 }
 </style>

@@ -38,6 +38,15 @@ export default {
   --scroll-bar-color: #f5f5f5;
   --scroll-bar-border: #f5f5f5;
   --scroll-bar: #e0e0e0;
+  --telegram-badge: #4cabdb;
+  --telegram-border: #4cabdb;
+  --telegram-bubble: #cce7f5;
+  --whatsapp-badge: #a2e096;
+  --whatsapp-border: #a2e096;
+  --whatsapp-bubble: #b5e7ab;
+  --fb-messenger-badge: #7fbbff;
+  --fb-messenger-border: #7fbbff;
+  --fb-messenger-bubble: #cce4ff;
 }
 
 .dark {
@@ -64,5 +73,14 @@ export default {
   --scroll-bar-color: #3e3e40;
   --scroll-bar-border: #0f0e14;
   --scroll-bar: #0f0e14;
+  --telegram-badge: #0088cc;
+  --telegram-border: #0088cc;
+  --telegram-bubble: #4cabdb;
+  --whatsapp-badge: #4fce5d;
+  --whatsapp-border: #4fce5d;
+  --whatsapp-bubble: #a2e096;
+  --fb-messenger-badge: #0078ff;
+  --fb-messenger-border: #0078ff;
+  --fb-messenger-bubble: #7fbbff;
 }
 </style>

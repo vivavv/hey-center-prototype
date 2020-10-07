@@ -2,11 +2,16 @@
   <div>
     <div class="chat-user-container">
       <svg-icon icon="arrow-left" class="arrow-icon" v-if="mobileView" />
-      <img src="@/assets/icons/profile-pic.svg" class="chat-user-picture" />
+      <img
+        :src="require(`../../../assets/images/${chat.profilePic}`)"
+        class="chat-user-picture"
+      />
       <div class="chat-user-description">
-        <div class="chat-user-title">Anna Sun</div>
+        <div class="chat-user-title">{{ chat.name }}</div>
         <div class="chat-user-status">
-          <span class="chat-service">Telegram</span>
+          <span class="chat-service" :class="chat.service">{{
+            capitalizeFirstLetter(chat.service)
+          }}</span>
           <span class="status">online</span>
         </div>
       </div>
@@ -17,6 +22,7 @@
 <script>
 export default {
   name: "ChatContact",
+  props: { chat: Object },
   data: () => {
     return {
       mobileView: true
@@ -25,6 +31,9 @@ export default {
   methods: {
     handleView() {
       this.mobileView = window.innerWidth <= 600;
+    },
+    capitalizeFirstLetter(service) {
+      return service.charAt(0).toUpperCase() + service.slice(1);
     }
   },
   created() {
@@ -49,6 +58,9 @@ export default {
   width: 70px;
   height: 70px;
   display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--gray);
+
   &:hover {
     cursor: pointer;
   }
@@ -88,6 +100,18 @@ export default {
   }
 }
 
+.telegram {
+  color: var(--telegram);
+}
+
+.whatsapp {
+  color: var(--whatsapp);
+}
+
+.fb-messenger {
+  color: var(--fb-messenger);
+}
+
 /* Small devices (landscape phones, 600px and up) */
 @media (max-width: 600px) {
   .chat-user-title {
@@ -103,6 +127,7 @@ export default {
   .chat-user-picture {
     width: 50px;
     height: 50px;
+    border: 1px solid var(--primary-color);
   }
 }
 </style>
