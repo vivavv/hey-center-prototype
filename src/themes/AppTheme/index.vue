@@ -33,6 +33,7 @@ export default {
   --search-box-border-mobile: #2a334e;
   --search-box-text: #ffffff;
   --new-chat-button-border: #04133f;
+  --new-chat-placeholder: #b6b6b6;
   --chat-border: #ededed;
   --chat-bar: #d3d3d333;
   --chat-bar-arrow: #707070;
@@ -80,6 +81,7 @@ export default {
   --search-box-border: #424242;
   --search-box-text: #b6b6b6;
   --new-chat-button-border: #19191c;
+  --new-chat-placeholder: #707070;
   --chat-border: #424242;
   --chat-bar: #d3d3d333;
   --chat-bar-arrow: #19191c;
