@@ -3,7 +3,7 @@
     <div>
       <img src="../../assets/hey-logo.svg" alt="logo" class="app-bar-logo" />
       <AppBarLink icon="user" />
-      <AppBarLink icon="chat" />
+      <AppBarLink icon="chat" class="active-icon" />
       <AppBarLink icon="time-clock" />
     </div>
     <div>
@@ -42,6 +42,10 @@ export default {
 .app-bar-logo {
   margin: 22px 0px 0px 10px;
   width: 4em;
+}
+
+.active-icon {
+  color: var(--active-appbar);
 }
 
 /* Small devices (landscape phones, 600px and up) */

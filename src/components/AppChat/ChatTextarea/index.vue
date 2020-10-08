@@ -1,6 +1,6 @@
 <template>
   <div class="chat-textarea-container">
-    <div class="chat-input-container">
+    <form @submit="sendMessage" class="chat-input-container">
       <TextareaAutosize
         class="chat-textarea"
         id="textarea"
@@ -8,9 +8,15 @@
         :maxHeight="150"
         :rows="1"
         placeholder="Enter a message..."
+        :value="message"
+        v-on:input="changeMessage($event)"
+        @keydown.enter.exact.prevent="sendMessage"
       />
-      <svg-icon icon="send" class="send-icon" />
-    </div>
+      <button type="submit" class="send-button">
+        <svg-icon icon="send" class="send-icon" />
+      </button>
+    </form>
+
     <TextareaIcons />
   </div>
 </template>
@@ -21,7 +27,33 @@ import TextareaIcons from "@/components/AppChat/ChatTextarea/TextareaIcons";
 
 export default {
   name: "ChatTextarea",
-  components: { TextareaAutosize, TextareaIcons }
+  components: { TextareaAutosize, TextareaIcons },
+  props: { chat: Object },
+  data: () => ({
+    message: ""
+  }),
+  methods: {
+    sendMessage(e) {
+      e.preventDefault();
+      console.log(this.chat.id);
+      if (this.message.length > 0) {
+        this.$store.dispatch("sendMessage", {
+          text: this.message,
+          chatId: this.chat.id
+        });
+        this.message = "";
+        setTimeout(() => {
+          const content = document.querySelector("#chat-content");
+          content.scrollTop = content.scrollHeight;
+        }, 50);
+      }
+    },
+    changeMessage(e) {
+      if (e.target) {
+        this.message = e.target.value;
+      }
+    }
+  }
 };
 </script>
 
@@ -60,6 +92,27 @@ export default {
 ::placeholder {
   color: var(--gray);
   opacity: 1;
+}
+
+.send-button {
+  background-color: var(--chat-background);
+  text-align: center;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &:focus,
+  &:active {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 .send-icon {

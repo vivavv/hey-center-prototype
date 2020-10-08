@@ -27,6 +27,7 @@ export default {
   border-right: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .new-chat {
@@ -34,10 +35,11 @@ export default {
   height: 50px;
   border-radius: 50%;
   background-color: var(--secondary-color);
-  border: 1px solid var(--new-chat-button-border);
-  position: fixed;
-  bottom: 90px;
-  left: 420px;
+  border: 1px solid var(--secondary-color);
+  // margin-top: 40px;
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
 
   &:hover {
     cursor: pointer;

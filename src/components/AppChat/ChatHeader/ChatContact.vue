@@ -41,7 +41,7 @@ export default {
       return service.charAt(0).toUpperCase() + service.slice(1);
     },
     goBack() {
-      this.$router.go(-1);
+      this.$router.replace({ path: "/" });
     }
   },
   created() {

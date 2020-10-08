@@ -7,17 +7,21 @@
       :class="iconClass"
     />
   </div>
-  <slot v-if="isActive" />
+  <TransitionExpanded>
+    <div v-if="isActive">
+      <slot />
+    </div>
+  </TransitionExpanded>
 </template>
 <script>
+import TransitionExpanded from "./TransitionExpanded";
+
 export default {
   name: "AppAccordionItem",
   inject: ["openItems", "toggleItem"],
+  components: { TransitionExpanded },
   props: {
     title: String
-  },
-  created() {
-    console.log(this.openItems.value);
   },
   computed: {
     isActive() {
@@ -47,7 +51,7 @@ export default {
 
 .accordion-item-icon {
   color: var(--chat-bar-arrow);
-  transition: transform 0.3s linear;
+  transition: transform 0.5s linear;
 
   &.close {
     transform: rotate(180deg);

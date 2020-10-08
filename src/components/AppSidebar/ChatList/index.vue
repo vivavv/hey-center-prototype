@@ -6,6 +6,7 @@
           v-for="chat in $store.state.chats.filter(chat => chat.favorite)"
           :key="chat.id"
           :chat="chat"
+          :class="isActiveChat(chat.id)"
           @click="navigateToChat(chat.id)"
         />
       </AppAccordionItem>
@@ -14,6 +15,7 @@
           v-for="chat in $store.state.chats.filter(chat => !chat.favorite)"
           :key="chat.id"
           :chat="chat"
+          :class="isActiveChat(chat.id)"
           @click="navigateToChat(chat.id)"
         />
       </AppAccordionItem>
@@ -36,20 +38,25 @@ export default {
   methods: {
     navigateToChat(id) {
       this.$router.push({ name: "AppChat", params: { id } });
+    },
+    isActiveChat(id) {
+      const route = this.$store.getters.getChatById(this.$route.params.id);
+
+      return route && route.id === id ? "active" : null;
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  text-align: center;
-}
-
 .chat-items-container {
   flex: 1 1 auto;
   // flex: 1;
   overflow-y: auto;
   height: 0px;
+}
+
+.active {
+  background-color: var(--chat-item-active);
 }
 </style>

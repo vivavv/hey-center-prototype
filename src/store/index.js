@@ -14,7 +14,7 @@ export default createStore({
         name: "Harriet McDermott",
         profilePic: "profile-pic1.jpg",
         favorite: true,
-        service: "whatsapp",
+        service: "fb-messenger",
         messages: [
           {
             id: 0,
@@ -225,11 +225,27 @@ export default createStore({
   mutations: {
     toggleTheme(state) {
       state.theme = state.theme === "light" ? "dark" : "light";
+    },
+
+    addMessage(state, { chatId, message }) {
+      console.log(message, chatId);
+      state.chats.find(chat => chat.id == chatId).messages.push(message);
     }
   },
   actions: {
     toggleTheme(context) {
       context.commit("toggleTheme");
+    },
+    sendMessage(context, { text, chatId }) {
+      context.commit("addMessage", {
+        message: {
+          id: 100,
+          date: "6:13PM",
+          type: "send",
+          text
+        },
+        chatId
+      });
     }
   },
   getters: {

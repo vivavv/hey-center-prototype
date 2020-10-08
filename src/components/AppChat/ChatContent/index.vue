@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-content-container">
+  <div class="chat-content-container" id="chat-content">
     <ChatStatus />
     <template v-for="message in messages" :key="message.id">
       <ChatReceived
@@ -25,7 +25,15 @@ import ChatSent from "./ChatSent";
 export default {
   name: "ChatContent",
   components: { ChatStatus, ChatReceived, ChatSent },
-  props: { messages: Array, service: String }
+  props: { messages: Array, service: String },
+  watch: {
+    messages() {
+      setTimeout(() => {
+        const content = document.querySelector("#chat-content");
+        content.scrollTop = content.scrollHeight;
+      }, 50);
+    }
+  }
 };
 </script>
 

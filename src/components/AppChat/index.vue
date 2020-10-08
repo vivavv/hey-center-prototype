@@ -1,12 +1,12 @@
 <template>
-  <div class="app-chat" v-if="!isActiveChat">
-    <ChatHeader :chat="chat" />
-    <ChatContent :messages="chat.messages" :service="chat.service" />
-    <ChatTextarea />
-  </div>
-  <div v-else class="app-chat-placeholder">
+  <div class="app-chat-placeholder" v-if="!isActiveChat && !mobileView">
     <svg-icon icon="chat-placeholder" class="chat-image" />
     <span class="new-conversation-text">Start a new conversation!</span>
+  </div>
+  <div class="app-chat" v-else>
+    <ChatHeader :chat="chat" />
+    <ChatContent :messages="chat.messages" :service="chat.service" />
+    <ChatTextarea :chat="chat" />
   </div>
 </template>
 
@@ -24,14 +24,24 @@ export default {
       return this.$store.getters.getChatById(this.$route.params.id || 0);
     },
     isActiveChat() {
-      console.log(
-        "hola",
-        this.$store.getters.getChatById(this.$route.params.id)
-      );
       return this.$store.getters.getChatById(this.$route.params.id)
-        ? false
-        : true;
+        ? true
+        : false;
     }
+  },
+  data: () => {
+    return {
+      mobileView: true
+    };
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth <= 600;
+    }
+  },
+  created() {
+    this.handleView();
+    window.addEventListener("resize", this.handleView);
   }
 };
 </script>
@@ -54,7 +64,7 @@ export default {
 
 .chat-image {
   color: var(--new-chat-placeholder);
-  font-size: 350px;
+  font-size: var(--placeholder-image);
   align-self: center;
 }
 
