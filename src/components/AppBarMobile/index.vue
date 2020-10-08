@@ -2,7 +2,7 @@
   <div class="app-bar">
     <div class="app-bar-mobile-header">
       <img src="../../assets/hey-logo.svg" alt="logo" class="app-bar-logo" />
-      <AppBarLink icon="menu-vertical" />
+      <AppBarLink icon="menu-vertical" class="menu-vertical-icon" />
     </div>
     <div class="app-bar-mobile-tabs">
       <AppBarLink icon="user" />
@@ -27,6 +27,10 @@ export default {
 }
 .app-bar-logo {
   width: 4em;
+}
+
+.menu-vertical-icon {
+  font-size: var(--icon-sm);
 }
 
 .app-bar-mobile-header {

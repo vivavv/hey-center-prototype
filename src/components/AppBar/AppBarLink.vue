@@ -12,7 +12,7 @@ export default {
 .app-bar-icon {
   font-size: var(--icon-md);
   color: var(--icons);
-  margin: 30px 0px;
+  margin: 30px;
   transition: color 0.2s ease;
 
   &:hover {
@@ -30,6 +30,7 @@ export default {
 @media (max-width: 600px) {
   .app-bar-icon {
     margin: 10px 0px;
+    text-align: center;
   }
 }
 </style>

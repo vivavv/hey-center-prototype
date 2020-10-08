@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import "normalize.css";
 import "@/assets/styles/custom.scss";
+import "animate.css/animate.min.css";
 import SvgIcon from "@/components/SvgIcon";
 
 const app = createApp(App);

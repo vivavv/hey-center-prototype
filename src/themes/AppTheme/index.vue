@@ -35,9 +35,12 @@ export default {
   --chat-background: #ffffff;
   --chat-status: rgba(112, 112, 112, 0.2);
   --chat-bubble: #f1f1f1;
-  --scroll-bar-color: #f5f5f5;
-  --scroll-bar-border: #f5f5f5;
-  --scroll-bar: #e0e0e0;
+  --scroll-bar-color: #e8e8e8;
+  --scroll-bar-border: #e8e8e8;
+  --scroll-bar-active: #c8c8c8;
+  --scroll-bar-button: #d0d0d0;
+  --scroll-bar-button-hover: #d8d8d8;
+  --scroll-bar-button-active: #dcdcdc;
   --telegram-badge: #4cabdb;
   --telegram-border: #4cabdb;
   --telegram-bubble: #cce7f5;

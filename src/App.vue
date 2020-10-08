@@ -3,7 +3,13 @@
   <AppTheme :mode="$store.state.theme">
     <div class="container">
       <DesktopApp v-if="!mobileView" />
-      <router-view v-else />
+      <router-view v-slot="slotProps" v-else>
+        <transition name="route" mode="out-in">
+          <keep-alive>
+            <component :is="slotProps.Component"></component>
+          </keep-alive>
+        </transition>
+      </router-view>
     </div>
   </AppTheme>
 </template>
@@ -37,13 +43,15 @@ export default {
 
 <style>
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  /* height: -webkit-fill-available; */
   display: flex;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,5 +70,5 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>

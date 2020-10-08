@@ -64,6 +64,32 @@
   right: 20px;
 }
 
+/** Transitions **/
+
+.route-enter-from {
+  transform: translateX(-100vw);
+  opacity: 0;
+}
+
+.route-leave-to {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+.route-enter-active,
+.route-leave-active {
+  transition: all 0.2s ease;
+}
+
+.router-leave-from {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.route-enter-to {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
 #app {
   font-family: "ProximaNova";
   box-sizing: border-box;
@@ -76,6 +102,8 @@
     url(../fonts/ProximaNova-Regular.otf) format("truetype");
 }
 
+/** Scrollbar **/
+
 *::-webkit-scrollbar {
   width: 8px;
   height: 2px;
@@ -85,27 +113,39 @@
   height: 0px;
 }
 *::-webkit-scrollbar-thumb {
-  background: #e1e1e1;
-  border: 0px none #ffffff;
+  background: var(--scroll-bar-button);
+  border: 0px none var(--scroll-bar-border);
   border-radius: 10px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
+  background: var(--scroll-bar-button-hover);
 }
 *::-webkit-scrollbar-thumb:active {
-  background: #000000;
+  background: var(--scroll-bar-button-active);
 }
 *::-webkit-scrollbar-track {
-  background: #666666;
+  background: var(--scroll-bar-color);
   border: 0px none #ffffff;
   border-radius: 0px;
 }
 *::-webkit-scrollbar-track:hover {
-  background: #666666;
+  background: var(--scroll-bar-color);
 }
 *::-webkit-scrollbar-track:active {
-  background: #333333;
+  background: var(--scroll-bar-active);
 }
 *::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+/* Small devices (landscape phones, 600px and up) */
+@media (max-width: 600px) {
+  *::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  *::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
 }

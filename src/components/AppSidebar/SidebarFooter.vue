@@ -62,7 +62,7 @@ export default {
 
 .footer-icon {
   color: var(--icons);
-  font-size: var(--icon-sm);
+  font-size: var(--icon-xs);
   transform: rotate(90deg);
   transition: color 0.2s ease;
 

@@ -20,7 +20,6 @@ export default {
 <style lang="scss" scoped>
 .mobile-app {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }

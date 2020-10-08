@@ -40,7 +40,14 @@ export default {
   justify-content: space-between;
 }
 .app-bar-logo {
-  margin: 22px 0px 0px;
+  margin: 22px 0px 0px 10px;
   width: 4em;
+}
+
+/* Small devices (landscape phones, 600px and up) */
+@media (max-width: 600px) {
+  .app-bar-logo {
+    margin: 22px 0px;
+  }
 }
 </style>

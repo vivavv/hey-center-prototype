@@ -69,7 +69,7 @@ export default {
   height: 50px;
   border-radius: 50%;
   display: inline-block;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--background-color);
 }
 
 .chat-item-description {
