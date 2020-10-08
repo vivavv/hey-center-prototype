@@ -4,9 +4,9 @@ export default createStore({
   state: {
     theme: "light",
     session: {
-      name: "Jane Doe",
+      name: "Jenny Doe",
       status: "I'm a human and a dancer",
-      profilePic: "jane-doe.jpg"
+      profilePic: "jenny-doe.jpg"
     },
     chats: [
       {

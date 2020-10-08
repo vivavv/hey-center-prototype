@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="chat-user-container">
-      <svg-icon icon="arrow-left" class="arrow-icon" v-if="mobileView" />
+      <svg-icon
+        icon="arrow-left"
+        class="arrow-icon"
+        v-if="mobileView"
+        @click="goBack()"
+      />
       <img
         :src="require(`../../../assets/images/${chat.profilePic}`)"
         class="chat-user-picture"
@@ -34,6 +39,9 @@ export default {
     },
     capitalizeFirstLetter(service) {
       return service.charAt(0).toUpperCase() + service.slice(1);
+    },
+    goBack() {
+      this.$router.go(-1);
     }
   },
   created() {
@@ -48,6 +56,10 @@ export default {
   font-size: var(--icon-md);
   color: var(--chat-header-text-mobile);
   margin-right: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 .chat-user-container {
   text-align: left;

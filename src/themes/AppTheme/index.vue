@@ -64,7 +64,7 @@ export default {
   --background-color: #2b2b2d;
   --on-background-color: white;
   --primary-color: #0f0e14;
-  --secondary-color: #04133f;
+  --secondary-color: #0e1013;
   --gray: #b6b6b6;
   --light-gray: #d3d3d3;
   --icons: #b6b6b6;
@@ -91,7 +91,10 @@ export default {
   --chat-received-text: #19191c;
   --scroll-bar-color: #3e3e40;
   --scroll-bar-border: #0f0e14;
-  --scroll-bar: #0f0e14;
+  --scroll-bar-active: #3e3e40;
+  --scroll-bar-button: #0f0e14;
+  --scroll-bar-button-hover: #07070a;
+  --scroll-bar-button-active: #57565a;
   --telegram-badge: #0088cc;
   --telegram-border: #0088cc;
   --telegram-bubble: #0088ccb3;
