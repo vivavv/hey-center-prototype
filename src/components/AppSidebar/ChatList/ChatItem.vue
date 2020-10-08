@@ -113,7 +113,7 @@ export default {
 }
 
 .icon-badge {
-  font-size: 16px;
+  font-size: var(--icon-xs);
   color: #ffffff;
   padding: 5px 3px;
   width: 27px;
@@ -130,7 +130,7 @@ export default {
   background-color: var(--whatsapp-badge);
 }
 
-.fb-messenger {
-  background-color: var(--fb-messenger-badge);
+.facebook {
+  background-color: var(--facebook-badge);
 }
 </style>

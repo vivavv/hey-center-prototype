@@ -49,8 +49,8 @@ export default {
   border-color: var(--whatsapp);
 }
 
-.fb-messenger {
-  border-color: var(--fb-messenger);
+.facebook {
+  border-color: var(--facebook);
 }
 
 /* Small devices (landscape phones, 600px and up) */

@@ -57,9 +57,9 @@ export default {
   --whatsapp-badge: #a2e096;
   --whatsapp-border: #a2e096;
   --whatsapp-bubble: #b5e7ab;
-  --fb-messenger-badge: #7fbbff;
-  --fb-messenger-border: #7fbbff;
-  --fb-messenger-bubble: #cce4ff;
+  --facebook-badge: #7fbbff;
+  --facebook-border: #7fbbff;
+  --facebook-bubble: #cce4ff;
 }
 
 .dark {
@@ -105,8 +105,8 @@ export default {
   --whatsapp-badge: #4fce5d;
   --whatsapp-border: #4fce5d;
   --whatsapp-bubble: #4fce5db3;
-  --fb-messenger-badge: #0078ff;
-  --fb-messenger-border: #0078ff;
-  --fb-messenger-bubble: #0078ffb3;
+  --facebook-badge: #0078ff;
+  --facebook-border: #0078ff;
+  --facebook-bubble: #0078ffb3;
 }
 </style>

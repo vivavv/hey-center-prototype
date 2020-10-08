@@ -51,10 +51,10 @@ export default {
   }
 }
 
-.fb-messenger {
-  background-color: var(--fb-messenger-bubble);
+.facebook {
+  background-color: var(--facebook-bubble);
   .bubble-corner {
-    color: var(--fb-messenger-bubble);
+    color: var(--facebook-bubble);
   }
 }
 </style>

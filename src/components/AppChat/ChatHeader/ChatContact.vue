@@ -121,8 +121,8 @@ export default {
   color: var(--whatsapp);
 }
 
-.fb-messenger {
-  color: var(--fb-messenger);
+.facebook {
+  color: var(--facebook);
 }
 
 /* Small devices (landscape phones, 600px and up) */
