@@ -21,8 +21,8 @@ export default {
 <style lang="scss" scoped>
 .sidebar {
   width: var(--app-sidebar-width);
-  background-color: var(--background-color);
-  border-right: 1px solid var(--gray);
+  background-color: var(--sidebar-background-color);
+  border-right: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
 }

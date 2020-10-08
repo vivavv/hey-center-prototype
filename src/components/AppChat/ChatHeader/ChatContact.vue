@@ -46,7 +46,7 @@ export default {
 <style lang="scss">
 .arrow-icon {
   font-size: var(--icon-md);
-  color: var(--chat-header-text);
+  color: var(--chat-header-text-mobile);
   margin-right: 10px;
 }
 .chat-user-container {
@@ -59,7 +59,8 @@ export default {
   height: 70px;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid var(--gray);
+  border: 1px solid;
+  border-color: var(--chat-header-color);
 
   &:hover {
     cursor: pointer;
@@ -116,18 +117,19 @@ export default {
 @media (max-width: 600px) {
   .chat-user-title {
     font-size: var(--header-title-mobile);
-    color: var(--chat-header-text);
+    color: var(--chat-header-text-mobile);
   }
 
   .chat-user-status {
     font-size: var(--header-status-mobile);
-    color: var(--chat-header-text);
+    color: var(--chat-header-text-mobile);
   }
 
   .chat-user-picture {
     width: 50px;
     height: 50px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid;
+    border-color: var(--chat-header-color-mobile);
   }
 }
 </style>

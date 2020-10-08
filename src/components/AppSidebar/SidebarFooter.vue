@@ -22,8 +22,8 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar-footer {
-  background-color: var(--secondary-color);
-  height: var(--sidebar-footer);
+  background-color: var(--sidebar-footer-color);
+  height: var(--sidebar-footer-height);
   display: flex;
   justify-content: space-between;
   align-items: center;

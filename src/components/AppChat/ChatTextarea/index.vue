@@ -29,7 +29,7 @@ export default {
 .chat-textarea-container {
   min-height: var(--chat-textarea-height);
   max-height: 300px;
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +48,8 @@ export default {
   border: none;
   padding: 10px 5px;
   resize: none;
+  background-color: var(--chat-background);
+  color: var(--gray);
 
   &:focus {
     border: none;

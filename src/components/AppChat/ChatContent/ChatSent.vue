@@ -41,7 +41,7 @@ export default { name: "ChatSent", props: { message: String, date: String } };
   position: absolute;
   background-repeat: no-repeat;
   bottom: -6px;
-  right: -10px;
+  right: -8px;
   z-index: 0;
   transform: scaleX(-1);
   color: var(--chat-bubble);

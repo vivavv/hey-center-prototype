@@ -24,17 +24,25 @@ export default {
   --send-icon: #00bfff;
   --active-appbar: #6cc8d6;
   --active-icons: #b6b6b6;
-  --search-box: #ffffff;
-  --search-box-border: #2a334e;
+  --sidebar-background-color: #ffffff;
+  --sidebar-border: #707070;
+  --sidebar-footer-color: #04133f;
+  --search-box-color: #ffffff;
+  --search-box-color-mobile: #1d2640;
+  --search-box-border: #707070;
+  --search-box-border-mobile: #2a334e;
   --search-box-text: #ffffff;
   --chat-border: #ededed;
-  --chat-bar: rgba(211, 211, 211, 0.2);
-  --chat-item-active: rgba(211, 211, 211, 0.35);
-  --chat-header-background: #1d2640;
-  --chat-header-text: #e4e4e4;
+  --chat-bar: #d3d3d333;
+  --chat-bar-arrow: #707070;
+  --chat-item-active: #d3d3d359;
+  --chat-header-color: #ffffff;
+  --chat-header-color-mobile: #1d2640;
+  --chat-header-text-mobile: #e4e4e4;
   --chat-background: #ffffff;
-  --chat-status: rgba(112, 112, 112, 0.2);
+  --chat-status: #e2e2e2;
   --chat-bubble: #f1f1f1;
+  --chat-received-text: #707070;
   --scroll-bar-color: #e8e8e8;
   --scroll-bar-border: #e8e8e8;
   --scroll-bar-active: #c8c8c8;
@@ -53,7 +61,7 @@ export default {
 }
 
 .dark {
-  --background-color: #222;
+  --background-color: #2b2b2d;
   --on-background-color: white;
   --primary-color: #0f0e14;
   --secondary-color: #04133f;
@@ -63,27 +71,35 @@ export default {
   --send-icon: #00bfff;
   --active-appbar: #e8e8e8;
   --active-icons: #e8e8e8;
-  --search-box: #2b2c30;
-  // --search-box-border: #2a334e;
-  // --search-box-text: #ffffff;
+  --sidebar-background-color: #19191c;
+  --sidebar-border: #0e1013;
+  --sidebar-footer-color: #0e1013;
+  --search-box-color: #424242;
+  --search-box-color-mobile: #424242;
+  --search-box-border: #424242;
+  --search-box-text: #b6b6b6;
   --chat-border: #424242;
-  --chat-bar: rgba(211, 211, 211, 0.2);
-  --chat-item-active: rgba(211, 211, 211, 0.35);
-  --chat-header-background: #2b2b2d;
+  --chat-bar: #d3d3d333;
+  --chat-bar-arrow: #19191c;
+  --chat-item-active: #d3d3d359;
+  --chat-header-color: #2b2b2d;
+  --chat-header-color-mobile: #2b2b2d;
+  --chat-header-text-mobile: #b6b6b6;
   --chat-background: #2b2b2d;
-  --chat-status: rgba(112, 112, 112, 0.2);
+  --chat-status: #70707073;
   --chat-bubble: #4f4f4f;
+  --chat-received-text: #19191c;
   --scroll-bar-color: #3e3e40;
   --scroll-bar-border: #0f0e14;
   --scroll-bar: #0f0e14;
   --telegram-badge: #0088cc;
   --telegram-border: #0088cc;
-  --telegram-bubble: #4cabdb;
+  --telegram-bubble: #0088ccb3;
   --whatsapp-badge: #4fce5d;
   --whatsapp-border: #4fce5d;
-  --whatsapp-bubble: #a2e096;
+  --whatsapp-bubble: #4fce5db3;
   --fb-messenger-badge: #0078ff;
   --fb-messenger-border: #0078ff;
-  --fb-messenger-bubble: #7fbbff;
+  --fb-messenger-bubble: #0078ffb3;
 }
 </style>

@@ -46,7 +46,7 @@ export default {
 }
 
 .accordion-item-icon {
-  color: var(--gray);
+  color: var(--chat-bar-arrow);
   transition: transform 0.3s linear;
 
   &.close {

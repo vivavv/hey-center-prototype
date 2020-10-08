@@ -1,6 +1,6 @@
 <template>
   <div class="chat-content-container">
-    <!-- <ChatStatus /> -->
+    <ChatStatus />
     <template v-for="message in messages" :key="message.id">
       <ChatReceived
         v-if="message.type === 'receive'"

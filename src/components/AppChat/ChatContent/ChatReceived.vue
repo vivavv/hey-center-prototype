@@ -19,7 +19,7 @@ export default {
 .received {
   align-self: flex-start;
   background-color: var(--telegram-bubble);
-  color: var(--gray);
+  color: var(--chat-received-text);
 }
 
 .text-received {

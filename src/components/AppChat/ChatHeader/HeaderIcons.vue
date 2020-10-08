@@ -57,9 +57,10 @@ export default {
 
 .badge {
   font-size: var(--badge-text);
-  color: #ffffff;
+  color: var(--background-color);
   padding: 8px;
   border-radius: 10px;
+  text-align: center;
 }
 .badge-success {
   background-color: var(--success);
@@ -76,7 +77,7 @@ export default {
   .header-icons {
     position: absolute;
     top: 20px;
-    color: var(--chat-header-text);
+    color: var(--chat-header-text-mobile);
     right: 20px;
   }
 

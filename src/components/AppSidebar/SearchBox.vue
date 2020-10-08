@@ -36,6 +36,8 @@ export default {
   padding: 5px;
   padding-left: 10px;
   flex: 1;
+  background-color: var(--search-box-color);
+  border-color: var(--search-box-border);
 }
 
 .search-icon {
@@ -59,6 +61,7 @@ export default {
   border: none;
   padding: 10px 10px;
   width: 100%;
+  background-color: var(--search-box-color);
 
   &:focus {
     border: none;
@@ -74,17 +77,18 @@ export default {
 /* Small devices (landscape phones, 600px and up) */
 @media (max-width: 600px) {
   .search-box-container {
-    background-color: var(--primary-color);
+    background-color: var(--search-box-color-mobile);
     padding-top: 15px;
     padding-bottom: 15px;
   }
 
   .input-container {
-    border-color: var(--search-box-border);
+    border-color: var(--search-box-border-mobile);
+    background-color: var(--search-box-color-mobile);
   }
 
   .search-input {
-    background-color: var(--primary-color);
+    background-color: var(--search-box-color-mobile);
     color: var(--search-box-text);
 
     &::placeholder {

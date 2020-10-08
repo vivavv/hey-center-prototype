@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 .chat-header {
   height: var(--chat-header-height);
-  background-color: var(--background-color);
+  background-color: var(--chat-header-color);
   border-bottom: 10px solid;
   display: flex;
   justify-content: space-between;
@@ -42,34 +42,22 @@ export default {
 }
 
 .telegram {
-  border-color: var(--telegram-border);
+  border-color: var(--telegram);
 }
 
 .whatsapp {
-  border-color: var(--whatsapp-border);
+  border-color: var(--whatsapp);
 }
 
 .fb-messenger {
-  border-color: var(--fb-messenger-border);
+  border-color: var(--fb-messenger);
 }
 
 /* Small devices (landscape phones, 600px and up) */
 @media (max-width: 600px) {
   .chat-header {
     height: var(--chat-header-height-mobile);
-    background-color: var(--chat-header-background);
-  }
-
-  .telegram {
-    border-color: var(--telegram);
-  }
-
-  .whatsapp {
-    border-color: var(--whatsapp);
-  }
-
-  .fb-messenger {
-    border-color: var(--fb-messenger);
+    background-color: var(--chat-header-color-mobile);
   }
 }
 </style>

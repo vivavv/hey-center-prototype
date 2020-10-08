@@ -18,9 +18,11 @@ export default { name: "TextareaIcons" };
   display: flex;
   justify-content: space-between;
   font-size: var(--icon-sm);
+  color: var(--gray);
 }
 
 .chat-textarea-options-right {
+  color: var(--gray);
   display: flex;
   & > * {
     margin-right: 20px;
