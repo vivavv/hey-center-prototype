@@ -2,7 +2,9 @@
   <div class="sidebar">
     <SearchBox />
     <ChatList />
-
+    <span class="new-chat">
+      <svg-icon icon="new-chat" class="new-chat-icon" />
+    </span>
     <SidebarFooter />
   </div>
 </template>
@@ -28,18 +30,26 @@ export default {
 }
 
 .new-chat {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--secondary-color);
-  // align-self: baseline;
+  border: 1px solid var(--new-chat-button-border);
+  position: fixed;
+  bottom: 90px;
+  left: 420px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .new-chat-icon {
   color: var(--icons);
-  font-size: 30px;
+  font-size: var(--icon-md);
   position: relative;
-  top: calc(50% - 15px);
+  top: 12px;
+  left: 12px;
 }
 
 /* Small devices (landscape phones, 600px and up) */
